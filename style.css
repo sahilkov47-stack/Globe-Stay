@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bitcount+Prop+Double+Ink:wght@100..900&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Lato:wght@900&family=Outfit:wght@100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  
+  background-image: url(images/pinki.avif);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mobile {
+  width: 100%;
+  max-width: 34vw;
+  height: 100vh;
+  max-height: 95vh;
+  margin: 20px 20px 20px 0 ;
+   background-color: transparent;
+  margin-right: 150px;
+  border-radius: 45px;
+  backdrop-filter: blur(20px);
+  border: 2px solid white;
+}
+.webname {
+  background-color: transparent;
+  width: 100vw;
+  max-width: 50vw;
+  min-width: 180px;
+  align-self: center;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  
+  margin: 0 50px 0 0;
+}
+.aerologo {
+  display: flex;
+  justify-content: center;
+}
+.aero {
+  width: 150px;
+  height: 150px;
+  mix-blend-mode: multiply;
+}
+.bars {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+.subbar1 {
+  width: 100vw;
+  max-width: 25vw;
+  height: 6vh;
+  border-radius: 45px;
+  font-size: 17px;
+  padding: 0 0 0 15px;
+  margin: 20px 0 30px 0;
+  border: 1px solid white;
+}
+.subbar1:hover{
+    border: 1px solid black;
+    cursor: text;
+}
+.subbar2 {
+  width: 100vw;
+  max-width: 25vw;
+  height: 6vh;
+  border-radius: 45px;
+  font-size: 17px;
+  padding: 0 0 0 15px;
+  margin: 0 0 5px 0;
+  border: 1px solid white;
+}
+
+.subbar2:hover{
+    border: 1px solid black;
+    cursor: text;}
+.forgot a {
+  text-decoration: none;
+  font-size: 20px;
+  margin: 0 5vw 0 0;
+  color: white;
+}
+.forgot {
+  display: flex;
+  justify-content: right;
+}
+.loginbar {
+  display: flex;
+  justify-content: center;
+}
+.loginbar button {
+  width: 60vw;
+  max-width: 25vw;
+  height: 6vh;
+  border-radius: 25px;
+  font-size: 22px;
+  margin-top: 40px;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  border: 1px solid steelblue;
+  background-color: steelblue;
+}
+.loginbar button:hover {
+  cursor: pointer;
+  width: 22vw;
+}
+.or {
+  padding: 50px 0 0 0;
+  margin-bottom: 8vh;
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  
+}
+.or1{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+.logos {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+a .log1 {
+  width: 40px;
+  height: 40px;
+}
+a .log2 {
+  width: 40px;
+  height: 40px;
+  margin: 0 20px;
+}
+a .log3 {
+  width: 40px;
+  height: 40px;
+  mix-blend-mode: multiply;
+}
+
+.name {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-self: center;
+}
+.gstay {
+  font-size: 80px;
+  padding-bottom: 30px;
+  text-align: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.gstay2 {
+  font-size: 80px;
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.master{
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 1426px) {
+    .gstay{
+        justify-self: start;
+    }
+    .loginbar button {
+    max-width: 25vw;
+    
+  }
+  .loginbar button:hover{
+    max-width: 22vw;
+  }
+  .mobile{
+    margin: 20px 57px 20px 0;
+    max-width: 40vw;
+    max-height: 95vh;
+  }
+    .forgot a{
+      margin-right: 8vw;
+      margin-top: 2vh;
+    }
+}
+
+@media screen and (max-width: 1085px) {
+  body{
+    height: 100vh;
+  }
+    .mobile{
+        max-height: 66vh;
+        max-width: 43vw;
+        margin-right: 4vw;
+    }
+    .subbar1{
+        max-width: 30vw;
+        max-height: 4vh;
+    }
+    .subbar2{
+        max-width: 30vw;
+        max-height: 4vh;
+    }
+    .loginbar button{
+        max-width: 30vw;
+        max-height: 4vh;
+    }
+    .or{
+      margin-bottom: 3vh;
+      
+    }
+    .forgot a{
+      font-size: 2vw;
+      margin: 2vh 7vw 0 0;
+    }
+    .gstay{
+      font-size: 8vw;
+    }
+    .gstay2{
+      font-size: 8vw;
+    }
+    .webname{
+      margin-right: 2vw;
+    }
+    
+}
+
+@media screen and (max-width: 598px) {
+  .name{
+    position: absolute;
+    top: 0;
+    max-height: 30vh;
+    flex-direction: column;
+    display: flex;
+  }
+  .master{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .webname{
+    display: flex;
+    margin: 0;
+    max-height: 23vh;
+  }
+  .mobile{
+    max-width: 70vw;
+    margin: 0;
+    max-height: 75vh;
+  }
+  body{
+    display: flex;
+    justify-content: center;
+  }
+  .subbar1{
+    max-width: 54vw;
+  }
+  .subbar2{
+    max-width: 54vw;
+  }
+  .loginbar button{
+    max-width: 54vw;
+  }
+  .forgot a{
+    font-size: 4vw;
+  }
+  .or1{
+    max-width: 96vw;
+  }
+  .gstay{
+    font-size: 9vw;
+  }
+  .gstay2{
+    font-size: 9vw;
+  }
+}
+ 
