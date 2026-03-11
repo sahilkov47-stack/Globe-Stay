@@ -106,7 +106,7 @@ body {
 }
 .loginbar button:hover {
   cursor: pointer;
-  width: 22vw;
+  max-width: 26vw;
 }
 .or {
   padding: 50px 0 0 0;
@@ -175,7 +175,7 @@ a .log3 {
     
   }
   .loginbar button:hover{
-    max-width: 22vw;
+    max-width: 26vw;
   }
   .mobile{
     margin: 20px 57px 20px 0;
@@ -209,6 +209,9 @@ a .log3 {
         max-width: 30vw;
         max-height: 4vh;
     }
+    .loginbar button:hover{
+    max-width: 32vw;
+  }
     .or{
       margin-bottom: 3vh;
       
@@ -266,6 +269,9 @@ a .log3 {
   }
   .loginbar button{
     max-width: 54vw;
+  }
+  .loginbar button:hover{
+    max-width: 57vw;
   }
   .forgot a{
     font-size: 4vw;
