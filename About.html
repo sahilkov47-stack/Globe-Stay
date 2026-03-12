@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About GlobeStay</title>
+<style>
+/* Reset & Basic */
+* {margin:0; padding:0; box-sizing:border-box;}
+body {font-family: Arial, Helvetica, sans-serif; background:#f5f7fa; color:#333;}
+
+/* Header */
+header{
+  background:linear-gradient(135deg,#5194b1,#ce6ace,#1b3272);
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 5%;
+  flex-wrap: wrap;
+}
+header h1 {color:white; font-size:2.5rem;}
+.aboutnav ul {list-style:none; display:flex; flex-wrap: wrap;}
+.aboutnav ul li {margin-left:2rem; color:white; cursor:pointer; font-size:1rem;
+transition-duration: 0.3s;
+padding: 8px 15px;
+border-radius: 6px;}
+.aboutnav ul li:hover {background:rgba(255,255,255,0.2);}
+
+/* Hero / Banner */
+.bgimg{
+  background-image: url('images/backgroundimg.jpg');
+  background-size: cover;
+  background-position: bottom;
+  height:50vh;
+  display:flex;
+  align-items: flex-end;
+  justify-content:center;
+}
+.bgimg h1{
+  color:white;
+  font-size:4rem;
+  margin-bottom:2rem;
+  text-align:center;
+}
+
+/* About Container */
+.about-container{
+  max-width:1100px;
+  margin:auto;
+  padding:50px 20px;
+}
+.about-title{text-align:center; font-size:2.5rem; color:#2c3e50; margin-bottom:10px;}
+.about-subtitle{text-align:center; color:#555; margin-bottom:40px; font-size:1.1rem;}
+
+/* Sections */
+.section{margin-bottom:40px;}
+.section h2{color:#1a73e8; margin-bottom:15px; font-size:1.8rem;}
+.section p{line-height:1.7; font-size:1rem;}
+
+/* Features Grid */
+.features{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+  gap:20px;
+  margin-top:20px;
+}
+.feature-box{
+  background:white;
+  padding:25px;
+  border-radius:8px;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+}
+.feature-box h3{color:#2c3e50; margin-bottom:10px; font-size:1.2rem;}
+
+/* Mission Section */
+.mission{
+  background:#1a73e8;
+  color:white;
+  padding:30px;
+  border-radius:10px;
+}
+
+/* Footer Note */
+.footer-note{text-align:center; margin-top:40px; color:#777; font-size:0.9rem;}
+
+/* Responsive Adjustments */
+@media(max-width:768px){
+  header h1{font-size:2rem; margin-bottom:0.5rem;}
+  .aboutnav ul li{margin-left:1rem; font-size:0.9rem;}
+  .bgimg h1{font-size:2.5rem; margin-bottom:1rem;}
+  .about-title{font-size:2rem;}
+  .section h2{font-size:1.5rem;}
+  .section p{font-size:0.95rem;}
+}
+
+@media(max-width:480px){
+  header{flex-direction:column; text-align:center;}
+  .aboutnav ul{justify-content:center;}
+  .features{grid-template-columns:1fr;}
+  .bgimg{
+    background-position: right;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>GlobeStay</h1>
+  <nav class="aboutnav">
+    <ul>
+      <li onclick="location.href='nextpage.html'">Home</li>
+      <li onclick="location.href='Contact.html'">Contact Us</li>
+    </ul>
+  </nav>
+</header>
+
+<div class="bgimg">
+  <h1>About GlobeStay</h1>
+</div>
+
+<div class="about-container">
+  <h1 class="about-title">Who We Are</h1>
+  <p class="about-subtitle">Your trusted partner for easy and reliable hotel bookings around the world.</p>
+
+  <div class="section">
+    <h2>Who We Are</h2>
+    <p>
+      GlobeStay is an innovative online hotel booking platform designed to make travel easier, faster, and more comfortable for everyone. 
+      Our platform connects travelers with thousands of hotels, resorts, and accommodations across different cities and countries.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>What We Offer</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>Wide Hotel Selection</h3>
+        <p>Access to many hotels from budget stays to luxury resorts.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Easy Booking</h3>
+        <p>Simple and fast booking system with user-friendly design.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Best Price Deals</h3>
+        <p>Affordable prices and special deals for travelers.</p>
+      </div>
+      <div class="feature-box">
+        <h3>Trusted Experience</h3>
+        <p>Reliable and secure hotel booking experience.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section mission">
+    <h2>Our Mission</h2>
+    <p>
+      Our mission at GlobeStay is to make hotel booking simple and accessible for everyone while providing a smooth and reliable experience.
+    </p>
+  </div>
+
+  <div class="section">
+    <h2>Why Choose GlobeStay?</h2>
+    <p>
+      GlobeStay focuses on delivering a modern, reliable and user-friendly platform where travelers can easily discover and book hotels around the world.
+    </p>
+  </div>
+
+  <p class="footer-note">
+    © 2026 GlobeStay – Making travel stays easier and smarter.
+  </p>
+</div>
+
+</body>
+</html>

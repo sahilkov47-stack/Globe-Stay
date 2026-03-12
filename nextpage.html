@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GlobeStay</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Segoe UI, Tahoma, sans-serif;
+background:#f4f6f9;
+}
+
+/* HEADER */
+
+header{
+background:linear-gradient(135deg,#5194b1,#ce6ace,#1b3272);
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:18px 6%;
+flex-wrap:wrap;
+box-shadow:0 4px 15px rgba(0,0,0,0.15);
+color:white;
+}
+
+.logo{
+font-size:28px;
+font-weight:600;
+}
+
+.tagline{
+font-size:16px;
+opacity:0.9;
+text-align:center;
+}
+
+.right-section{
+display:flex;
+align-items:center;
+gap:15px;
+}
+
+.currency select{
+padding:6px 10px;
+border-radius:6px;
+border:none;
+font-size:13px;
+outline:none;
+cursor:pointer;
+width:135px;
+}
+
+.aboutnav ul{
+list-style:none;
+display:flex;
+align-items:center;
+}
+
+.aboutnav ul li{
+color:white;
+margin-left:10px;
+cursor:pointer;
+padding:8px 14px;
+border-radius:6px;
+transition:0.3s;
+font-size:14px;
+font-weight:500;
+}
+
+.aboutnav ul a{
+text-decoration:none;
+}
+
+.aboutnav ul li:hover{
+background:rgba(255,255,255,0.2);
+}
+
+/* HERO SECTION */
+
+.bgimgmain{
+height:80vh;
+background: linear-gradient(rgba(11,48,104,0.5),rgba(148,43,134,0.5)),url(images/cm.webp);
+background-repeat:no-repeat;
+background-size:cover;
+background-position:50% 30%;
+}
+
+.maincontent{
+display:flex;
+flex-direction:column;
+justify-content:flex-end;
+color:white;
+height:36vh;
+width:70vw;
+margin:auto;
+}
+
+.bgh1,.bgh3{
+text-align:center;
+width:100%;
+}
+
+.boxes{
+justify-content:center;
+border-radius:8px;
+align-items:center;
+width: 49.5vw;
+height: 10vh;
+display:flex;
+gap:10px;
+margin:40px auto;
+background-color:transparent;
+padding:10px;
+}
+
+.box1 input{
+width:220px;
+height:40px;
+border-radius:6px;
+border:none;
+padding-left:10px;
+}
+
+.box2 input{
+width:140px;
+height:40px;
+border-radius:6px;
+border:none;
+}
+
+button{
+height:40px;
+padding:0 20px;
+border:none;
+border-radius:6px;
+background:#0070ff;
+color:white;
+cursor:pointer;
+}
+
+/* RESULTS SECTION */
+
+.results-section{
+padding:40px 6%;
+}
+
+.breadcrumb{
+font-size:14px;
+color:#666;
+margin-bottom:10px;
+}
+
+.result-title{
+margin-bottom:25px;
+}
+
+.results-container{
+display:flex;
+gap:25px;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+width:260px;
+}
+
+.map-box{
+    background-image: url(images/maps.jpg);
+    background-size: cover;
+    background-position: center;
+    width: 15vw;
+    height: 20vh;
+height:180px;
+border-radius:8px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin-bottom:20px;
+}
+
+.map-box button{
+background:#0a66ff;
+color:white;
+border:none;
+padding:10px 15px;
+}
+
+.filter-box{
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 2px 8px rgba(0,0,0,0.1);
+}
+
+.filter-box ul{
+list-style:none;
+margin:10px 0;
+}
+
+.filter-box li{
+padding:6px 0;
+cursor:pointer;
+}
+
+/* HOTEL RESULTS */
+
+.hotel-results{
+flex:1;
+}
+
+.tabs{
+display:flex;
+gap:10px;
+margin-bottom:20px;
+}
+
+.tabs button{
+padding:10px 15px;
+border:1px solid #ccc;
+background:white;
+border-radius:5px;
+}
+
+.tabs .active{
+background:#0a66ff;
+color:white;
+border:none;
+}
+
+/* HOTEL CARD */
+
+.hotel-card{
+display:flex;
+background:white;
+border-radius:10px;
+padding:15px;
+margin-bottom:20px;
+box-shadow:0 2px 8px rgba(0,0,0,0.08);
+}
+
+.hotel-card img{
+width:200px;
+height:150px;
+object-fit:cover;
+border-radius:8px;
+margin-right:15px;
+}
+
+.hotel-info{
+flex:1;
+}
+
+.hotel-info h3{
+color:#0a66ff;
+margin-bottom:6px;
+}
+
+.location{
+font-size:14px;
+color:#555;
+margin-bottom:8px;
+}
+
+.desc{
+font-size:14px;
+color:#666;
+}
+
+.price-box{
+text-align:right;
+display:flex;
+flex-direction:column;
+justify-content:space-between;
+}
+
+.rating{
+font-weight:bold;
+}
+
+.price{
+color:#008009;
+font-size:20px;
+font-weight:bold;
+}
+
+.availability{
+background:#0a66ff;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+}
+
+/* RESPONSIVE */
+
+/* ============================= */
+/* RESPONSIVE FOR TABLETS */
+/* ============================= */
+
+@media (max-width:1100px){
+
+.boxes{
+width:70vw;
+}
+
+.box1 input{
+width:200px;
+}
+
+.box2 input{
+width:120px;
+}
+
+.sidebar{
+width:220px;
+}
+
+.map-box{
+width:100%;
+}
+
+.hotel-card img{
+width:180px;
+height:140px;
+}
+
+}
+
+
+/* ============================= */
+/* RESPONSIVE FOR SMALL TABLETS */
+/* ============================= */
+
+@media (max-width:900px){
+
+header{
+flex-direction:column;
+text-align:center;
+gap:10px;
+}
+
+.tagline{
+order:3;
+}
+
+.right-section{
+flex-direction:column;
+}
+
+.results-container{
+flex-direction:column;
+}
+
+.sidebar{
+width:100%;
+}
+
+.map-box{
+width:100%;
+height:180px;
+}
+
+.boxes{
+flex-direction:column;
+height:auto;
+width:90vw;
+}
+
+.box1 input{
+width:100%;
+}
+
+.box2{
+display:flex;
+gap:10px;
+}
+
+.box2 input{
+width:48%;
+}
+
+button{
+width:100%;
+}
+
+.hotel-card{
+flex-direction:column;
+}
+
+.hotel-card img{
+width:100%;
+height:220px;
+margin-bottom:10px;
+}
+
+.price-box{
+text-align:left;
+margin-top:10px;
+}
+
+}
+
+
+/* ============================= */
+/* RESPONSIVE FOR MOBILES */
+/* ============================= */
+
+@media (max-width:600px){
+
+.logo{
+font-size:22px;
+}
+
+.tagline{
+font-size:14px;
+}
+
+.currency select{
+width:110px;
+font-size:12px;
+}
+
+.aboutnav ul{
+flex-direction:row;
+justify-content:center;
+}
+
+.aboutnav ul li{
+font-size:13px;
+padding:6px 10px;
+}
+
+.bgh1{
+font-size:24px;
+}
+
+.bgh3{
+font-size:14px;
+}
+
+.boxes{
+padding:15px;
+}
+
+.result-title{
+font-size:20px;
+}
+
+.hotel-info h3{
+font-size:16px;
+}
+
+.desc{
+font-size:13px;
+}
+
+.price{
+font-size:18px;
+}
+
+}
+
+
+/* ============================= */
+/* RESPONSIVE FOR VERY SMALL PHONES */
+/* ============================= */
+
+@media (max-width:400px){
+
+.bgh1{
+font-size:20px;
+}
+
+.bgh3{
+font-size:13px;
+}
+
+.box2{
+flex-direction:column;
+}
+
+.box2 input{
+width:100%;
+}
+
+.hotel-card img{
+height:180px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">GlobeStay.com</div>
+
+<div class="tagline">
+Find & Book the Perfect Hotel Anywhere in the World
+</div>
+
+<div class="right-section">
+
+<div class="currency">
+<select>
+<option>Select Currency</option>
+<option>PKR</option>
+<option>USD</option>
+<option>EURO</option>
+<option>RIYAL</option>
+<option>POUNDS</option>
+</select>
+</div>
+
+<nav class="aboutnav">
+<ul>
+<a href="About.html"><li>About Us</li></a>
+<a href="Contact.html"><li>Contact Us</li></a>
+</ul>
+</nav>
+
+</div>
+
+</header>
+
+
+<div class="bgimgmain">
+
+<div class="maincontent">
+
+<h1 class="bgh1">Search hotels in Islamabad</h1>
+
+<h3 class="bgh3">
+Enter your dates to see the latest prices and deals for Islamabad hotels
+</h3>
+
+</div>
+
+<div class="boxes">
+
+<div class="box1">
+<input type="text" placeholder="Hotels in Islamabad">
+</div>
+
+<div class="box2">
+<input type="date">
+<input type="date">
+</div>
+
+<button>Search</button>
+
+</div>
+
+</div>
+
+
+<div class="results-section">
+
+<div class="breadcrumb">
+Home › Hotels › Pakistan › Islamabad Capital Territory › Islamabad
+</div>
+
+<h2 class="result-title">Islamabad – 1937 hotels and places to stay</h2>
+
+<div class="results-container">
+
+<div class="sidebar">
+
+<div class="map-box">
+<button>Show hotels on map</button>
+</div>
+
+<div class="filter-box">
+<h3>Find your perfect stay</h3>
+
+<p>Star rating</p>
+<ul>
+<li>5 stars</li>
+<li>4 stars</li>
+<li>3 stars</li>
+<li>2 stars</li>
+<li>1 star</li>
+</ul>
+
+<p>Review score</p>
+<ul>
+<li>Superb: 9+</li>
+<li>Very good: 8+</li>
+<li>Good: 7+</li>
+<li>Pleasant: 6+</li>
+</ul>
+
+</div>
+
+</div>
+
+
+<div class="hotel-results">
+
+<div class="tabs">
+<button class="active">Our top picks</button>
+</div>
+
+
+<div class="hotel-card">
+
+<img src="images/vista.jfif">
+
+<div class="hotel-info">
+
+<h3>Villa Vista ⭐⭐⭐⭐</h3>
+
+<p class="location">Hotel in F-6 Sector, Islamabad</p>
+
+<p class="desc">
+Located in Islamabad, within 4.8 km of Shah Faisal Mosque and 10 km of Lake View Park.
+</p>
+
+</div>
+
+<div class="price-box">
+
+<p class="rating">9.1 Superb</p>
+
+<p class="price">PKR 22,680</p>
+
+<button class="availability">Check availability</button>
+
+</div>
+
+</div>
+
+
+<div class="hotel-card">
+
+<img src="images/regalia.jfif">
+
+<div class="hotel-info">
+
+<h3>Islamabad Regalia Hotel ⭐⭐⭐⭐</h3>
+
+<p class="location">Hotel in G-6 Sector, Islamabad</p>
+
+<p class="desc">
+Islamabad Regalia Hotel provides accommodation with a fitness centre and free private parking.
+</p>
+
+</div>
+
+<div class="price-box">
+
+<p class="rating">9.1 Superb</p>
+
+<p class="price">PKR 18,865</p>
+
+<button class="availability">Check availability</button>
+
+</div>
+
+</div>
+
+
+<div class="hotel-card">
+
+<img src="images/1h.jpg">
+
+<div class="hotel-info">
+
+<h3>Royal Crown Hotel ⭐⭐⭐⭐</h3>
+
+<p class="location">Hotel in F-7 Sector, Islamabad</p>
+
+<p class="desc">
+Located in Islamabad, Royal Crown Hotel is just 3.5 km from Shah Faisal Mosque and close to popular shopping areas. The hotel offers modern rooms, free WiFi, private parking, and an on-site restaurant. Guests can also enjoy a fitness center and 24-hour front desk service.
+</p>
+
+</div>
+
+<div class="price-box">
+
+<p class="rating">9.0 Superb</p>
+
+<p class="price">PKR 18,999</p>
+
+<button class="availability">Check availability</button>
+
+</div>
+
+</div>
+<div class="hotel-card">
+
+<img src="images/3h.png">
+
+<div class="hotel-info">
+
+<h3>Margalla View Residency ⭐⭐⭐⭐</h3>
+
+<p class="location">Hotel in E-11 Sector, Islamabad</p>
+
+<p class="desc">
+Margalla View Residency offers comfortable accommodation with scenic views of the Margalla Hills. The property features spacious rooms, complimentary breakfast, free WiFi, and secure parking. Popular attractions such as Faisal Mosque and Centaurus Mall are just a short drive away.
+</p>
+
+</div>
+
+<div class="price-box">
+
+<p class="rating">8.8 Very Good</p>
+
+<p class="price">PKR 17,965</p>
+
+<button class="availability">Check availability</button>
+
+</div>
+
+</div>
+<div class="hotel-card">
+
+<img src="images/4h.webp">
+
+<div class="hotel-info">
+
+<h3>Serenity Boutique Hotel ⭐⭐⭐⭐⭐</h3>
+
+<p class="location">Hotel in Blue Area, Islamabad</p>
+
+<p class="desc">
+Serenity Boutique Hotel provides luxury accommodation in the heart of Islamabad’s Blue Area. Guests can enjoy elegant rooms, a rooftop restaurant, spa facilities, and a modern fitness center. The hotel is located near Centaurus Mall and major business centers.
+</p>
+
+</div>
+
+<div class="price-box">
+
+<p class="rating">9.4 Superb</p>
+
+<p class="price">PKR 16,865</p>
+
+<button class="availability">Check availability</button>
+
+</div>
+
+</div>
+<div class="hotel-card">
+
+<img src="images/5h.jpg">
+
+<div class="hotel-info">
+
+<h3>Grand Horizon Hotel ⭐⭐⭐⭐</h3>
+
+<p class="location">Hotel in F-8 Sector, Islamabad</p>
+
+<p class="desc">
+Grand Horizon Hotel offers modern accommodation in the heart of Islamabad. Located just a short distance from Faisal Mosque and Centaurus Mall, the hotel provides spacious rooms, complimentary WiFi,
+</p>
+
+</div>
+
+<div class="price-box">
+
+<p class="rating">8.7 Very Good</p>
+
+<p class="price">PKR 16,999</p>
+
+<button class="availability">Check availability</button>
+
+</div>
+
+</div>
+<div class="hotel-card">
+
+<img src="images/6h.jpg">
+
+<div class="hotel-info">
+
+<h3>Skyline Executive Suites ⭐⭐⭐⭐⭐</h3>
+
+<p class="location">Hotel in Blue Area, Islamabad</p>
+
+<p class="desc">
+Skyline Executive Suites features premium serviced apartments with panoramic city views. The property offers luxury rooms, a rooftop dining area, a fitness center, and free WiFi. Major attractions such as Centaurus Mall and Faisal Mosque are within a few minutes’ drive.
+</p>
+
+</div>
+
+<div class="price-box">
+
+<p class="rating">9.2 Superb</p>
+
+<p class="price">PKR 15,865</p>
+
+<button class="availability">Check availability</button>
+
+</div>
+
+</div>
+<div class="hotel-card">
+
+<img src="images/7h.jfif">
+
+<div class="hotel-info">
+
+<h3>Islamabad Garden Hotel ⭐⭐⭐⭐</h3>
+
+<p class="location">Hotel in G-11 Sector, Islamabad</p>
+
+<p class="desc">
+Islamabad Garden Hotel provides comfortable accommodation with modern amenities. The hotel features well-furnished rooms, free parking, a garden seating area, and complimentary breakfast. Popular shopping areas and restaurants are located nearby.
+</p>
+
+</div>
+
+<div class="price-box">
+
+<p class="rating">8.5 Very Good</p>
+
+<p class="price">PKR 15,000</p>
+
+<button class="availability">Check availability</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
