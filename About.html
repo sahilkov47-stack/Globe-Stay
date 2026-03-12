@@ -5,11 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About GlobeStay</title>
 <style>
-/* Reset & Basic */
 * {margin:0; padding:0; box-sizing:border-box;}
 body {font-family: Arial, Helvetica, sans-serif; background:#f5f7fa; color:#333;}
-
-/* Header */
 header{
   background:linear-gradient(135deg,#5194b1,#ce6ace,#1b3272);
   display:flex;
@@ -22,9 +19,8 @@ header{
   left: 0;
   z-index: 100;
   width: 100%;
-  transition: transform 0.3s ease; /* added for smooth hide/show */
+  transition: transform 0.3s ease; 
 }
-/* Header hide class */
 header.hide {
   transform: translateY(-100%);
 }
@@ -37,7 +33,6 @@ padding: 8px 15px;
 border-radius: 6px;}
 .aboutnav ul li:hover {background:rgba(255,255,255,0.2);}
 
-/* Hero / Banner */
 .bgimg{
   background-image: url('images/backgroundimg.jpg');
   background-size: cover;
@@ -54,14 +49,13 @@ border-radius: 6px;}
   text-align:center;
 }
 
-/* About Container */
 .about-container{
   max-width:1100px;
   margin:auto;
   padding:50px 20px;
   position: absolute;
   left: -200vw;
-  animation: slide 4s forwards ;
+  animation: slide 1.5s forwards ;
   
   white-space: normal;
  
@@ -77,12 +71,10 @@ border-radius: 6px;}
 .about-title{text-align:center; font-size:2.5rem; color:#2c3e50; margin-bottom:10px;}
 .about-subtitle{text-align:center; color:#555; margin-bottom:40px; font-size:1.1rem;}
 
-/* Sections */
 .section{margin-bottom:40px;}
 .section h2{color:#1a73e8; margin-bottom:15px; font-size:1.8rem;}
 .section p{line-height:1.7; font-size:1rem;}
 
-/* Features Grid */
 .features{
   display:grid;
   grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
@@ -97,18 +89,14 @@ border-radius: 6px;}
 }
 .feature-box h3{color:#2c3e50; margin-bottom:10px; font-size:1.2rem;}
 
-/* Mission Section */
 .mission{
   background:#1a73e8;
   color:white;
   padding:30px;
   border-radius:10px;
 }
-
-/* Footer Note */
 .footer-note{text-align:center; margin-top:40px; color:#777; font-size:0.9rem;}
 
-/* Responsive Adjustments */
 @media(max-width:1200px){
   header h1{font-size:2rem; margin-bottom:0.5rem;}
   .aboutnav ul li{margin-left:1rem; font-size:0.9rem;}
@@ -204,7 +192,6 @@ border-radius: 6px;}
   </p>
 </div>
 
-<!-- JS for header hide/show -->
 <script>
 let lastScroll = 0;
 const header = document.querySelector("header");
@@ -213,10 +200,8 @@ window.addEventListener("scroll", () => {
   const currentScroll = window.pageYOffset;
 
   if (currentScroll > lastScroll) {
-    // Scroll down → hide header
     header.classList.add("hide");
   } else {
-    // Scroll up → show header
     header.classList.remove("hide");
   }
 
